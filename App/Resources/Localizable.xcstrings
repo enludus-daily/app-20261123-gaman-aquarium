@@ -1,42 +1,1960 @@
 {
   "sourceLanguage": "ja",
   "strings": {
-    "はじめる": {
+    "%@ が生まれた": {
+      "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Start"
+            "value": "%@ hatched"
           }
         }
       }
     },
-    "リセット": {
+    "%@ で Pro にする": {
+      "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Reset"
+            "value": "Get Pro for %@"
           }
         }
       }
     },
-    "1 たす": {
+    "%@ になる予定・%d 時間 冷ます": {
+      "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Add 1"
+            "value": "Will hatch a %@ · cools %dh"
           }
         }
       }
     },
-    "回数 %lld": {
+    "%@ の卵": {
+      "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Count %lld"
+            "value": "%@ egg"
+          }
+        }
+      }
+    },
+    "%@ の卵。孵せる": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ egg, ready to hatch"
+          }
+        }
+      }
+    },
+    "%@ を待てた": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "You waited out %@"
+          }
+        }
+      }
+    },
+    "%@ を待てた。図鑑に載った": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "You waited out %@. Added to the book"
+          }
+        }
+      }
+    },
+    "%@ を待てた。水槽で孵そう": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "You waited out %@. Hatch it in your tank"
+          }
+        }
+      }
+    },
+    "%@ 未満": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Under %@"
+          }
+        }
+      }
+    },
+    "%@・%@・%@ になる予定": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ · %@ · will be a %@"
+          }
+        }
+      }
+    },
+    "%d 個 孵せる": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%d ready"
+          }
+        }
+      }
+    },
+    "%d 匹が一回り大きくなった": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%d fish grew a size"
+          }
+        }
+      }
+    },
+    "%d 匹が泳いでいる": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%d fish swimming"
+          }
+        }
+      }
+    },
+    "%d 時間": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%dh"
+          }
+        }
+      }
+    },
+    "%d 時間 冷まして待とう": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Let it cool for %d hours"
+          }
+        }
+      }
+    },
+    "1 か月後の自分は、どっちを喜ぶ？": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Which would future-you thank you for?"
+          }
+        }
+      }
+    },
+    "1 回の購入で、ずっと": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "One purchase, forever"
+          }
+        }
+      }
+    },
+    "1 年前の自分なら、欲しがった？": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Would you have wanted it a year ago?"
+          }
+        }
+      }
+    },
+    "1 文字けす": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Delete"
+          }
+        }
+      }
+    },
+    "1 週間": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 week"
+          }
+        }
+      }
+    },
+    "24 時間・48 時間・72 時間・1 週間": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "24h, 48h, 72h or a full week"
+          }
+        }
+      }
+    },
+    "Pro にする": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Get Pro"
+          }
+        }
+      }
+    },
+    "Pro の代金は、1 回の我慢で取り戻せる": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "One waited-out want pays for Pro"
+          }
+        }
+      }
+    },
+    "Pro を使っている。ありがとう！": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "You have Pro. Thank you!"
+          }
+        }
+      }
+    },
+    "Pro を見る": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "See Pro"
+          }
+        }
+      }
+    },
+    "¥3,000（$30）以上の欲しい物は、さらに 1 日長く冷ます": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wants of ¥3,000 ($30) or more cool one extra day"
+          }
+        }
+      }
+    },
+    "あと %d 分": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%dm left"
+          }
+        }
+      }
+    },
+    "あと %d 時間": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%dh left"
+          }
+        }
+      }
+    },
+    "あと %d日 %d時間": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%dd %dh left"
+          }
+        }
+      }
+    },
+    "あなたが我慢した合計": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "YOU'VE WAITED OUT"
+          }
+        }
+      }
+    },
+    "いまは App Store につながらない。あとでもう一度試してほしい": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Can't reach the App Store right now. Please try again later"
+          }
+        }
+      }
+    },
+    "えさ": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Feed"
+          }
+        }
+      }
+    },
+    "えさで大きく": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "FEED TO GROW"
+          }
+        }
+      }
+    },
+    "お知らせ": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "NOTIFICATIONS"
+          }
+        }
+      }
+    },
+    "お腹がすいているときに選んでいない？": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Are you shopping hungry?"
+          }
+        }
+      }
+    },
+    "がまん水族館": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wishfish"
+          }
+        }
+      }
+    },
+    "がまん水族館 Pro": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wishfish Pro"
+          }
+        }
+      }
+    },
+    "この卵が孵ったら、どんな魚になりそう？": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "What fish do you think this egg will be?"
+          }
+        }
+      }
+    },
+    "この卵はもう水槽にない": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This egg is no longer in the tank"
+          }
+        }
+      }
+    },
+    "その「欲しい」は、何色をしている？": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "What color is this want, today?"
+          }
+        }
+      }
+    },
+    "そのほか": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MORE"
+          }
+        }
+      }
+    },
+    "その他": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Other"
+          }
+        }
+      }
+    },
+    "その金額で、ほかに何ができる？": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "What else could that money do?"
+          }
+        }
+      }
+    },
+    "その金額は、何時間ぶんの働き？": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "How many hours of work is that price?"
+          }
+        }
+      }
+    },
+    "それ、1 週間後も欲しい？": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Will you still want it next week?"
+          }
+        }
+      }
+    },
+    "それがあると、毎日の何が変わる？": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "What would change in your day with it?"
+          }
+        }
+      }
+    },
+    "それがなかった昨日、困った？": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Did you miss it yesterday?"
+          }
+        }
+      }
+    },
+    "それは、ずっと探していた物？": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Have you been looking for this for a while?"
+          }
+        }
+      }
+    },
+    "それを使う場面を、3 つ言える？": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Can you name three times you'd use it?"
+          }
+        }
+      }
+    },
+    "また明日、見に来てね": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Come back tomorrow"
+          }
+        }
+      }
+    },
+    "まだない。泡になっても、また卵を置けばいい": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "None yet. If one pops, just place another egg"
+          }
+        }
+      }
+    },
+    "まだ見ていない魚（%@）": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Not found yet (%@)"
+          }
+        }
+      }
+    },
+    "まだ静かな水槽": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A quiet tank, for now"
+          }
+        }
+      }
+    },
+    "まだ魚はいない。欲しい物を卵にして、待てたら孵る。下の影は、来るかもしれない魚": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No fish yet. Turn a want into an egg; wait it out and it hatches. The shadows below are fish that might come"
+          }
+        }
+      }
+    },
+    "もう持っている物で、代わりにならない？": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Could something you own do the job?"
+          }
+        }
+      }
+    },
+    "もし壊れたら、また買う？": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "If it broke, would you buy it again?"
+          }
+        }
+      }
+    },
+    "エンゼル": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Angelfish"
+          }
+        }
+      }
+    },
+    "ガジェット": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gadgets"
+          }
+        }
+      }
+    },
+    "ガチャ 10 連": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "10x gacha pull"
+          }
+        }
+      }
+    },
+    "ゲーム・課金": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Games"
+          }
+        }
+      }
+    },
+    "コンビニ": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Snacks"
+          }
+        }
+      }
+    },
+    "ジンベエ": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Whale shark"
+          }
+        }
+      }
+    },
+    "スニーカー": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sneakers"
+          }
+        }
+      }
+    },
+    "セールが終わっても欲しい？": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Would you want it after the sale ends?"
+          }
+        }
+      }
+    },
+    "テトラ": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tetra"
+          }
+        }
+      }
+    },
+    "マンタ": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Manta"
+          }
+        }
+      }
+    },
+    "ワイヤレスイヤホン": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wireless earbuds"
+          }
+        }
+      }
+    },
+    "今日の冷ます問い": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "TODAY'S COOL-DOWN QUESTION"
+          }
+        }
+      }
+    },
+    "今日の問い": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "TODAY'S QUESTION"
+          }
+        }
+      }
+    },
+    "今日は、深呼吸を 3 回してから決めよう": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Take three slow breaths before you decide"
+          }
+        }
+      }
+    },
+    "今月のがまん水族館": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "My Wishfish month"
+          }
+        }
+      }
+    },
+    "今月のまとめ": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This month's summary"
+          }
+        }
+      }
+    },
+    "今月の自分に、ごほうびは足りてる？": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Has this month been short on treats?"
+          }
+        }
+      }
+    },
+    "使い方をもう一度見る": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Show the intro again"
+          }
+        }
+      }
+    },
+    "使う時間は、週に何時間ありそう？": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "How many hours a week would you use it?"
+          }
+        }
+      }
+    },
+    "借りる・試す方法はない？": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Could you borrow it or try it first?"
+          }
+        }
+      }
+    },
+    "値段を見ずに選んでも、これを選ぶ？": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Would you pick it if price didn't show?"
+          }
+        }
+      }
+    },
+    "共有画像を送る": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Share the card"
+          }
+        }
+      }
+    },
+    "冬": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Winter"
+          }
+        }
+      }
+    },
+    "冬のニット": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Winter knit"
+          }
+        }
+      }
+    },
+    "冷ます時間": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "COOL-DOWN TIME"
+          }
+        }
+      }
+    },
+    "冷ます時間を自分で決める": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Set your own cool-down"
+          }
+        }
+      }
+    },
+    "効果音": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sound effects"
+          }
+        }
+      }
+    },
+    "卵": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Egg"
+          }
+        }
+      }
+    },
+    "卵が孵りそう": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "An egg is ready to hatch"
+          }
+        }
+      }
+    },
+    "卵が孵るときに知らせる": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tell me when an egg is ready"
+          }
+        }
+      }
+    },
+    "卵は泡になった": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The egg turned to bubbles"
+          }
+        }
+      }
+    },
+    "卵は泡になって消える。責めないから、正直に。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The egg will turn to bubbles. No judgment, just honesty."
+          }
+        }
+      }
+    },
+    "卵を置いた": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Egg placed"
+          }
+        }
+      }
+    },
+    "卵を置いて、冷ます": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Place the egg & wait"
+          }
+        }
+      }
+    },
+    "友だちに相談したら、なんて言われそう？": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "What would a friend say about it?"
+          }
+        }
+      }
+    },
+    "同じくらいうれしい、無料のことは？": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "What free thing would feel just as good?"
+          }
+        }
+      }
+    },
+    "同じ物を前にも買っていない？": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Have you bought something like it before?"
+          }
+        }
+      }
+    },
+    "名前と金額と種類を入れるだけ。卵は 48 時間（大きな欲しい物は 72 時間）温まる。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Just a price and a category. The egg cools for 48 hours — 72 for big wants."
+          }
+        }
+      }
+    },
+    "名前（なくてもいい）": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Name (optional)"
+          }
+        }
+      }
+    },
+    "図鑑": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Book"
+          }
+        }
+      }
+    },
+    "図鑑 %d / %d": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fish book %d / %d"
+          }
+        }
+      }
+    },
+    "夏": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Summer"
+          }
+        }
+      }
+    },
+    "夜のアクアリウム": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Night aquarium"
+          }
+        }
+      }
+    },
+    "夜の礁": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Night reef"
+          }
+        }
+      }
+    },
+    "夜の礁・深海・熱帯の川。あなたの魚がそのまま泳ぐ": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Night reef, deep sea, jungle river — with your own fish"
+          }
+        }
+      }
+    },
+    "夜ふかしの勢いで決めていない？": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Is this a late-night decision?"
+          }
+        }
+      }
+    },
+    "季節の魚 12 種": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "12 seasonal fish"
+          }
+        }
+      }
+    },
+    "季節の魚（PRO）": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "SEASONAL FISH (PRO)"
+          }
+        }
+      }
+    },
+    "孵せる": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ready"
+          }
+        }
+      }
+    },
+    "孵った": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hatched"
+          }
+        }
+      }
+    },
+    "孵った %d": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hatched %d"
+          }
+        }
+      }
+    },
+    "孵った翌日に見に来ると、魚はえさを食べて大きくなる。金額はこの iPhone の中だけ。銀行やカードとはつながらない。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Visit the day after a hatch to feed your fish and watch them grow. Prices stay on this iPhone — no bank or card links."
+          }
+        }
+      }
+    },
+    "孵るとき 3 回に 1 回、その季節だけの魚になる": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 in 3 hatches becomes a fish of the season"
+          }
+        }
+      }
+    },
+    "小さいサイズ・安い版では足りない？": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Would a smaller or cheaper one do?"
+          }
+        }
+      }
+    },
+    "広告やおすすめで見かけたから？": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Did an ad or a feed put it in your head?"
+          }
+        }
+      }
+    },
+    "待つ。水槽に戻る": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Keep waiting"
+          }
+        }
+      }
+    },
+    "待つ間に、値段が下がるかもしれない": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The price might drop while you wait"
+          }
+        }
+      }
+    },
+    "待てずに買ってしまった": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "I couldn't wait — I bought it"
+          }
+        }
+      }
+    },
+    "待てたら、その金額の\\n魚が生まれる": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wait it out, and it hatches\\ninto a fish"
+          }
+        }
+      }
+    },
+    "待てたら、その金額の魚が生まれる": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wait it out and it hatches into a fish"
+          }
+        }
+      }
+    },
+    "待てた自分を、少しほめておこう": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Give yourself a little credit for waiting"
+          }
+        }
+      }
+    },
+    "我慢した合計": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Waited out"
+          }
+        }
+      }
+    },
+    "我慢した合計・種類ごとの金額・孵った数と泡の数": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Total waited out, by category, hatched vs. popped"
+          }
+        }
+      }
+    },
+    "手に入れた瞬間の気分を想像してみて": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Picture the moment you get it. Then the day after"
+          }
+        }
+      }
+    },
+    "承認を待っている": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Waiting for approval"
+          }
+        }
+      }
+    },
+    "持っている物を 1 つ手放してでも欲しい？": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Would you give something up to make room?"
+          }
+        }
+      }
+    },
+    "振動": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Haptics"
+          }
+        }
+      }
+    },
+    "推しのアクスタ": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fan merch"
+          }
+        }
+      }
+    },
+    "新しい魚：%@": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "New fish: %@"
+          }
+        }
+      }
+    },
+    "新作のフラペ": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "New frappé"
+          }
+        }
+      }
+    },
+    "新作ゲームのDLC": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "New game DLC"
+          }
+        }
+      }
+    },
+    "明日の朝、もう一度考えよう": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Think about it again tomorrow morning"
+          }
+        }
+      }
+    },
+    "春": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Spring"
+          }
+        }
+      }
+    },
+    "月のまとめと共有画像": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Monthly summary & share card"
+          }
+        }
+      }
+    },
+    "服・小物": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Clothes"
+          }
+        }
+      }
+    },
+    "期間限定の言葉に急かされていない？": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Is a countdown rushing you?"
+          }
+        }
+      }
+    },
+    "次の目盛り %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Next mark %@"
+          }
+        }
+      }
+    },
+    "次へ": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Next"
+          }
+        }
+      }
+    },
+    "欲しい": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "I want…"
+          }
+        }
+      }
+    },
+    "欲しい、と思ったら\\n卵を置く": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Want something?\\nPlace an egg"
+          }
+        }
+      }
+    },
+    "欲しいが %d つ 渦巻いている": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%d wants swirling"
+          }
+        }
+      }
+    },
+    "欲しい物は、卵にして冷ます": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Every want becomes an egg"
+          }
+        }
+      }
+    },
+    "欲しい物を卵にする": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Turn a want into an egg"
+          }
+        }
+      }
+    },
+    "欲しい物を思いついたら、下の「欲しい」で卵にしよう": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "When a want pops up, turn it into an egg with I want… below"
+          }
+        }
+      }
+    },
+    "欲しい理由を一言で言うと？": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Why do you want it, in one word?"
+          }
+        }
+      }
+    },
+    "欲しくなったのは、疲れていたから？": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Did you want it because you were tired?"
+          }
+        }
+      }
+    },
+    "欲しくなったのは、退屈だったから？": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Did boredom start this want?"
+          }
+        }
+      }
+    },
+    "正直に押せたのはえらい。泡も図鑑に残る": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Thanks for being honest. Bubbles stay in the book too"
+          }
+        }
+      }
+    },
+    "水槽の見た目": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "TANK STYLE"
+          }
+        }
+      }
+    },
+    "水槽の見た目 3 種": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "3 tank styles"
+          }
+        }
+      }
+    },
+    "水槽をはじめる": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Open my tank"
+          }
+        }
+      }
+    },
+    "水槽：魚 %d 匹、卵 %d 個": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tank: %d fish, %d eggs"
+          }
+        }
+      }
+    },
+    "泡": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bubbles"
+          }
+        }
+      }
+    },
+    "泡 %d": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Popped %d"
+          }
+        }
+      }
+    },
+    "泡になった卵": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "EGGS THAT POPPED"
+          }
+        }
+      }
+    },
+    "深海": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Deep sea"
+          }
+        }
+      }
+    },
+    "温めている卵": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "EGGS COOLING"
+          }
+        }
+      }
+    },
+    "無料でも、卵・孵化・図鑑 24 種・水槽は全部使える。広告はない。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eggs, hatching, the 24-fish book and your tank are all free. No ads, ever."
+          }
+        }
+      }
+    },
+    "無料は 48 時間（大きな欲しい物は 72 時間）。Pro で自分で決められる": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Free: 48h (72h for big wants). Pro lets you choose"
+          }
+        }
+      }
+    },
+    "熱帯の川": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jungle river"
+          }
+        }
+      }
+    },
+    "目盛りを全部こえた": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Every mark passed"
+          }
+        }
+      }
+    },
+    "砂の上は卵でいっぱい。孵すか、正直に「買った」を押そう": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The sand is full of eggs. Hatch one, or mark one as bought"
+          }
+        }
+      }
+    },
+    "秋": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Autumn"
+          }
+        }
+      }
+    },
+    "種類ごとの我慢": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BY CATEGORY"
+          }
+        }
+      }
+    },
+    "箱を開けたあとの片付けまで想像して": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Imagine unboxing it, then cleaning up after"
+          }
+        }
+      }
+    },
+    "見た目のため？ 使うため？": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Is it for looks, or for use?"
+          }
+        }
+      }
+    },
+    "設定": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Settings"
+          }
+        }
+      }
+    },
+    "設定を開く": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Open Settings"
+          }
+        }
+      }
+    },
+    "誰かに見せたいから欲しい？": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Do you want it, or want to show it?"
+          }
+        }
+      }
+    },
+    "買った。泡にする": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "I bought it. Pop it"
+          }
+        }
+      }
+    },
+    "買ったあと、どこに置く？": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Where would it live once you own it?"
+          }
+        }
+      }
+    },
+    "買っても責めない。\\n卵が泡になるだけ": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bought it anyway?\\nThe egg just turns to bubbles"
+          }
+        }
+      }
+    },
+    "買わない日も、水槽は育つ": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your tank grows on the days you don't buy"
+          }
+        }
+      }
+    },
+    "購入できなかった。もう一度試してほしい": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Purchase failed. Please try again"
+          }
+        }
+      }
+    },
+    "購入を復元": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Restore purchases"
+          }
+        }
+      }
+    },
+    "通知が許可されていない。iPhone の設定で許可できる": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Notifications are off for this app. You can allow them in Settings"
+          }
+        }
+      }
+    },
+    "金額で魚が決まる。待てた合計が、水槽の底の目盛りに積もっていく。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The price decides the fish. Everything you wait out adds up on the sand gauge."
+          }
+        }
+      }
+    },
+    "金額や名前はこの iPhone の中だけに保存する。銀行・カードとはつながらず、どこにも送らない": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prices and names stay on this iPhone. No bank or card links, nothing is sent anywhere"
+          }
+        }
+      }
+    },
+    "金額を入れると、生まれる魚が決まる": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enter a price to see which fish it becomes"
+          }
+        }
+      }
+    },
+    "閉じる": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Close"
+          }
+        }
+      }
+    },
+    "音と振動": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "SOUND & HAPTICS"
+          }
+        }
+      }
+    },
+    "食べ物": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Food"
           }
         }
       }

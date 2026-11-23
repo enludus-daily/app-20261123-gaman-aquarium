@@ -3,7 +3,7 @@
   "products": [
     {
       "type": "NON_CONSUMABLE",
-      "productId": "com.enludus.daily.template.pro",
+      "productId": "com.enludus.daily.016.pro",
       "referenceName": "Pro",
       "price": 480,
       "familySharable": true,
