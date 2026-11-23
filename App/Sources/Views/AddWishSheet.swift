@@ -100,7 +100,7 @@ struct AddWishSheet: View {
                             if k == "del" { Image(systemName: "delete.left").font(.system(size: 18)) } else { Text(k).font(Fonts.number(24)) }
                         }
                         .foregroundStyle(Ink.text)
-                        .frame(maxWidth: .infinity, minHeight: 46)
+                        .frame(maxWidth: .infinity, minHeight: 42)
                         .background(RoundedRectangle(cornerRadius: 12, style: .continuous).fill(Color.white.opacity(0.06)))
                     }
                     .buttonStyle(KeyStyle())

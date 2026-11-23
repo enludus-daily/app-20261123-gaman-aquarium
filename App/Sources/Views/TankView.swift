@@ -32,6 +32,19 @@ struct TankView: View {
                         .allowsHitTesting(false)
                 }
             }
+            if model.tank.fish.isEmpty && model.tank.eggs.isEmpty {
+                VStack(spacing: 6) {
+                    Text(tr("影は、来るかもしれない魚", "The shadows are fish that might come"))
+                        .font(Fonts.light(17)).foregroundStyle(Ink.text)
+                    Text(tr("欲しい物を思いついたら「欲しい」で卵にしよう。待てたら孵る", "When a want pops up, tap I want… to make an egg. Wait it out and it hatches"))
+                        .font(Fonts.body(13)).foregroundStyle(Ink.soft)
+                }
+                .multilineTextAlignment(.center)
+                .padding(.horizontal, 32)
+                .frame(maxHeight: .infinity, alignment: .center)
+                .padding(.bottom, 60)
+                .allowsHitTesting(false)
+            }
             VStack(spacing: 8) {
                 Header()
                 if let banner = model.banner {

@@ -1222,6 +1222,17 @@
         }
       }
     },
+    "影は、来るかもしれない魚": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The shadows are fish that might come"
+          }
+        }
+      }
+    },
     "待つ。水槽に戻る": {
       "extractionState": "manual",
       "localizations": {
@@ -1537,6 +1548,17 @@
           "stringUnit": {
             "state": "translated",
             "value": "When a want pops up, turn it into an egg with I want… below"
+          }
+        }
+      }
+    },
+    "欲しい物を思いついたら「欲しい」で卵にしよう。待てたら孵る": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "When a want pops up, tap I want… to make an egg. Wait it out and it hatches"
           }
         }
       }

@@ -53,6 +53,10 @@ struct EggSheet: View {
                     .padding(16)
                     .background(RoundedRectangle(cornerRadius: Radius.panel, style: .continuous).fill(Ink.glass))
 
+                }
+            }
+            .safeAreaInset(edge: .bottom, spacing: 0) {
+                VStack(spacing: 4) {
                     Button {
                         model.press()
                         model.activeSheet = nil
@@ -84,6 +88,9 @@ struct EggSheet: View {
                         .accessibilityIdentifier("main.bought")
                     }
                 }
+                .padding(.horizontal, 20).padding(.top, 10).padding(.bottom, 4)
+                .frame(maxWidth: 560).frame(maxWidth: .infinity)
+                .background(Ink.sheet)
             }
         } else {
             SheetFrame(title: tr("卵", "Egg")) {

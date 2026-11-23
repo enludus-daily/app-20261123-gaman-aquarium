@@ -526,10 +526,11 @@ struct TankThumbnail: View {
     var theme: TankTheme
     var fish: [Fish]
     var t: Double = 1000
+    var ghosts = true
 
     var body: some View {
         Canvas { ctx, size in
-            let s = TankSnapshot(palette: theme.palette, fish: fish, eggs: [], dim: 0, t: t, burst: nil, pop: nil, feedStart: nil, ghosts: fish.isEmpty, reduceMotion: false)
+            let s = TankSnapshot(palette: theme.palette, fish: fish, eggs: [], dim: 0, t: t, burst: nil, pop: nil, feedStart: nil, ghosts: ghosts && fish.isEmpty, reduceMotion: false)
             TankArt.draw(&ctx, size: size, s: s)
         }
         .accessibilityHidden(true)
