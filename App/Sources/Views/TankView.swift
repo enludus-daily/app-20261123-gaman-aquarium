@@ -66,7 +66,7 @@ struct TankCanvas: View {
 
     var body: some View {
         Group {
-            if model.still {
+            if model.still || model.calm {
                 canvas(t: 1000)
             } else {
                 TimelineView(.animation(minimumInterval: 1.0 / 30, paused: model.paused)) { tl in

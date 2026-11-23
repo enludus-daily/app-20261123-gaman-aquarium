@@ -44,8 +44,10 @@ struct AddWishSheet: View {
                     .padding(.top, 6)
 
                     // 種類（魚の色になる）
-                    LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 8), count: 3), spacing: 8) {
-                        ForEach(WishKind.allCases) { kind in
+                    VStack(spacing: 8) {
+                      ForEach(0..<2) { row in
+                       HStack(spacing: 8) {
+                        ForEach(WishKind.allCases.filter { $0.rawValue / 3 == row }) { kind in
                             let on = model.draft.kind == kind
                             Button {
                                 model.pressTick += 1
@@ -65,6 +67,8 @@ struct AddWishSheet: View {
                             .accessibilityIdentifier("main.kind\(kind.rawValue)")
                             .accessibilityAddTraits(on ? .isSelected : [])
                         }
+                       }
+                      }
                     }
 
                     TextField(text: $model.draft.name, prompt: Text(tr("名前（なくてもいい）", "Name (optional)")).foregroundStyle(Ink.faint)) { EmptyView() }
@@ -93,8 +97,10 @@ struct AddWishSheet: View {
     private func keypad(amount: Int) -> some View {
         let keys = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "00", "0", "del"]
         return VStack(spacing: 8) {
-            LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 8), count: 3), spacing: 8) {
-                ForEach(keys, id: \.self) { k in
+            VStack(spacing: 8) {
+              ForEach(0..<4) { row in
+               HStack(spacing: 8) {
+                ForEach(keys[row * 3..<row * 3 + 3], id: \.self) { k in
                     Button { model.key(k) } label: {
                         Group {
                             if k == "del" { Image(systemName: "delete.left").font(.system(size: 18)) } else { Text(k).font(Fonts.number(24)) }
@@ -107,6 +113,8 @@ struct AddWishSheet: View {
                     .accessibilityLabel(k == "del" ? tr("1 文字けす", "Delete") : k)
                     .accessibilityIdentifier("main.key\(k)")
                 }
+               }
+              }
             }
             Button {
                 model.placeDraft()

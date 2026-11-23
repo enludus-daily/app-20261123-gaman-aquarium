@@ -53,6 +53,8 @@ final class AppModel {
     var reduceMotion = false
     /// 撮影（時刻を止める）
     var still = false
+    /// UI テスト：水槽の動きだけ止める（動き続けると XCUITest が待ち続けて遅くなる）
+    var calm = false
     /// 画面が裏に回ったら描画を止める（電池）
     var paused = false
     var proOverride: Bool?
