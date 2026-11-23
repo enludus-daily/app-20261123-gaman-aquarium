@@ -8,7 +8,7 @@ struct OnboardingView: View {
         let page = model.onboardingPage
         VStack(spacing: 0) {
             ZStack {
-                TankThumbnail(theme: .night, fish: page == 2 ? Array(sampleFish.prefix(5)) : [], t: 1000 + Double(page) * 7, ghosts: false)
+                TankThumbnail(theme: .night, fish: [], t: 1000 + Double(page) * 7, ghosts: false)
                     .ignoresSafeArea()
                 // 文字が魚に重ならないよう、水槽は奥に沈める
                 Ink.sheet.opacity(0.55).ignoresSafeArea()

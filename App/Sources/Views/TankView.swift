@@ -14,7 +14,7 @@ struct TankView: View {
                     .background(Ink.sheet.opacity(0.92))
             }
         }
-        .background(Color(hex: model.effectiveTheme.palette.waterBottom).ignoresSafeArea())
+        .background(Color(hex: model.effectiveTheme.palette.waterTop).ignoresSafeArea())
         .safeAreaInset(edge: .bottom, spacing: 0) { ControlBar() }
     }
 
@@ -157,6 +157,9 @@ struct Header: View {
 struct SandGauge: View {
     @Environment(AppModel.self) private var model
 
+    /// 砂に彫った文字の色（深海の暗い砂では明るくする）
+    private var ink: Color { model.effectiveTheme == .deep ? Ink.text : Color(hex: 0x0A1A33) }
+
     var body: some View {
         let total = model.savedTotal
         let m = TankState.milestone(total: total, scale: model.scale)
@@ -164,27 +167,27 @@ struct SandGauge: View {
         let frac = m.next.map { Double(total - prev) / Double(max(1, $0 - prev)) } ?? 1
         HStack(alignment: .bottom, spacing: 10) {
             VStack(alignment: .leading, spacing: 1) {
-                Caption(text: tr("我慢した合計", "Waited out").uppercased(), color: Color(hex: 0x0A1A33, opacity: 0.75))
+                Caption(text: tr("我慢した合計", "Waited out").uppercased(), color: ink.opacity( 0.75))
                 Text(model.format(total))
                     .font(Fonts.number(22)).kerning(-0.5)
-                    .foregroundStyle(Color(hex: 0x0A1A33))
+                    .foregroundStyle(ink)
                     .contentTransition(.numericText())
                     .lineLimit(1).minimumScaleFactor(0.6)
             }
             VStack(alignment: .trailing, spacing: 3) {
                 GeometryReader { g in
                     ZStack(alignment: .leading) {
-                        Capsule().fill(Color(hex: 0x0A1A33, opacity: 0.18))
-                        Capsule().fill(Color(hex: 0x0A1A33, opacity: 0.6)).frame(width: max(4, g.size.width * frac))
+                        Capsule().fill(ink.opacity( 0.18))
+                        Capsule().fill(ink.opacity( 0.6)).frame(width: max(4, g.size.width * frac))
                         ForEach(1..<5) { i in
-                            Rectangle().fill(Color(hex: 0x0A1A33, opacity: 0.3)).frame(width: 1, height: 8)
+                            Rectangle().fill(ink.opacity( 0.3)).frame(width: 1, height: 8)
                                 .offset(x: g.size.width * Double(i) / 5, y: -1)
                         }
                     }
                 }
                 .frame(height: 6)
                 Text(m.next.map { trf("次の目盛り %@", "Next mark %@", model.format($0)) } ?? tr("目盛りを全部こえた", "Every mark passed"))
-                    .font(Fonts.label(10)).foregroundStyle(Color(hex: 0x0A1A33, opacity: 0.7)).lineLimit(1).minimumScaleFactor(0.6)
+                    .font(Fonts.label(10)).foregroundStyle(ink.opacity( 0.7)).lineLimit(1).minimumScaleFactor(0.6)
             }
             .frame(maxWidth: 150)
         }
