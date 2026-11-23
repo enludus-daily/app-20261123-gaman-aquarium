@@ -16,6 +16,8 @@ struct TankView: View {
         }
         .background(Color(hex: model.effectiveTheme.palette.waterTop).ignoresSafeArea())
         .safeAreaInset(edge: .bottom, spacing: 0) { ControlBar() }
+        // シートを開いている間は、下の水槽のボタンを読み上げ・UI テストから外す（隠れたボタンを押せない部品として拾わない）
+        .accessibilityHidden(model.activeSheet != nil)
     }
 
     private var tankArea: some View {
