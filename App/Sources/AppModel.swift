@@ -292,8 +292,7 @@ final class AppModel {
     func setNotify(_ on: Bool) {
         if on {
             Task {
-                let settings = await UNUserNotificationCenter.current().notificationSettings()
-                if settings.authorizationStatus == .denied {
+                if await Notifier.status() == .denied {
                     notifyOn = false
                     notifyDenied = true
                 } else {
@@ -323,6 +322,10 @@ enum Notifier {
         let request = UNNotificationRequest(identifier: egg.id.uuidString, content: content,
                                             trigger: UNTimeIntervalNotificationTrigger(timeInterval: interval, repeats: false))
         UNUserNotificationCenter.current().add(request)
+    }
+
+    static func status() async -> UNAuthorizationStatus {
+        await UNUserNotificationCenter.current().notificationSettings().authorizationStatus
     }
 
     static func cancel(_ id: UUID) {

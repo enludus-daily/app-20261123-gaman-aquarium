@@ -27,7 +27,8 @@ struct TankRuleTests {
     @Test func eggHatchesExactlyAfterCoolingAcrossMidnight() throws {
         var tank = TankState()
         let placed = date(23, 23, 30)
-        let egg = try #require(tank.place(name: "", amount: 680, currency: "JPY", kind: .food, now: placed))
+        let eggMade = tank.place(name: "", amount: 680, currency: "JPY", kind: .food, now: placed)
+        let egg = try #require(eggMade)
         // 日をまたいでも、時刻の差で数える（25 日 23:30 に孵る）
         #expect(egg.hatchAt == date(25, 23, 30))
         if case .warming(let remaining, let progress) = tank.status(of: egg, now: date(24, 23, 30)) {
@@ -42,17 +43,22 @@ struct TankRuleTests {
 
     @Test func clockGoingBackwardKeepsTheEggWarming() throws {
         var tank = TankState()
-        let egg = try #require(tank.place(name: "", amount: 500, currency: "JPY", kind: .food, now: date(23)))
+        let eggMade = tank.place(name: "", amount: 500, currency: "JPY", kind: .food, now: date(23))
+        let egg = try #require(eggMade)
         // 端末の時刻を戻しても、進みは 0 のまま（マイナスにならない）
         if case .warming(_, let p) = tank.status(of: egg, now: date(20)) { #expect(p == 0) } else { Issue.record("温めているはず") }
-        #expect(tank.hatch(egg.id, now: date(24), pro: false, calendar: calendar) == nil)
+        let early = tank.hatch(egg.id, now: date(24), pro: false, calendar: calendar)
+        #expect(early == nil)
     }
 
     @Test func cannotHatchEarly() throws {
         var tank = TankState()
-        let egg = try #require(tank.place(name: "", amount: 500, currency: "JPY", kind: .food, now: date(1)))
-        #expect(tank.hatch(egg.id, now: date(2), pro: false, calendar: calendar) == nil)
-        let result = try #require(tank.hatch(egg.id, now: date(3, 12, 1), pro: false, calendar: calendar))
+        let eggMade = tank.place(name: "", amount: 500, currency: "JPY", kind: .food, now: date(1))
+        let egg = try #require(eggMade)
+        let early = tank.hatch(egg.id, now: date(2), pro: false, calendar: calendar)
+        #expect(early == nil)
+        let hatched = tank.hatch(egg.id, now: date(3, 12, 1), pro: false, calendar: calendar)
+        let result = try #require(hatched)
         #expect(result.isNewSpecies)
         #expect(result.fish.band == .angel)
         #expect(tank.eggs.isEmpty)
@@ -151,8 +157,10 @@ struct TankRuleTests {
 
     @Test func boughtEggBecomesABubbleAndCountsNothing() throws {
         var tank = TankState()
-        let egg = try #require(tank.place(name: "スニーカー", amount: 8_000, currency: "JPY", kind: .clothes, now: date(1)))
-        #expect(tank.buy(egg.id, now: date(2)) != nil)
+        let eggMade = tank.place(name: "スニーカー", amount: 8_000, currency: "JPY", kind: .clothes, now: date(1))
+        let egg = try #require(eggMade)
+        let bubble = tank.buy(egg.id, now: date(2))
+        #expect(bubble != nil)
         #expect(tank.eggs.isEmpty)
         #expect(tank.bubbles.count == 1)
         #expect(tank.savedTotal(currency: "JPY") == 0)
@@ -179,28 +187,38 @@ struct TankRuleTests {
             if i == 0 { #expect(egg?.slot == 3) }
         }
         #expect(tank.isFull)
-        #expect(tank.place(name: "", amount: 100, currency: "JPY", kind: .food, now: date(1)) == nil)
+        let ninth = tank.place(name: "", amount: 100, currency: "JPY", kind: .food, now: date(1))
+        #expect(ninth == nil)
         #expect(Set(tank.eggs.map(\.slot)).count == TankState.maxEggs)
-        #expect(tank.place(name: "", amount: 0, currency: "JPY", kind: .food, now: date(1)) == nil || tank.isFull)
+        var empty = TankState()
+        let zero = empty.place(name: "", amount: 0, currency: "JPY", kind: .food, now: date(1))
+        #expect(zero == nil)
     }
 
     // MARK: えさと成長
 
     @Test func fishGrowOnlyWhenVisitedOnALaterDay() throws {
         var tank = TankState()
-        let egg = try #require(tank.place(name: "", amount: 1_000, currency: "JPY", kind: .game, now: date(1, 8)))
-        _ = try #require(tank.hatch(egg.id, now: date(3, 9), pro: false, calendar: calendar))
+        let eggMade = tank.place(name: "", amount: 1_000, currency: "JPY", kind: .game, now: date(1, 8))
+        let egg = try #require(eggMade)
+        let hatched = tank.hatch(egg.id, now: date(3, 9), pro: false, calendar: calendar)
+        _ = try #require(hatched)
         // 孵った日はまだ食べない
-        #expect(tank.feed(now: date(3, 22), calendar: calendar) == 0)
+        let sameDay = tank.feed(now: date(3, 22), calendar: calendar)
+        #expect(sameDay == 0)
         // 翌日に来ると 1 回大きくなる。同じ日に 2 回はない
-        #expect(tank.feed(now: date(4, 7), calendar: calendar) == 1)
-        #expect(tank.feed(now: date(4, 23), calendar: calendar) == 0)
+        let nextDay = tank.feed(now: date(4, 7), calendar: calendar)
+        let again = tank.feed(now: date(4, 23), calendar: calendar)
+        #expect(nextDay == 1)
+        #expect(again == 0)
         // 来なかった日は大きくならない（罰もない）
         #expect(tank.fish[0].fed == 1)
-        #expect(tank.feed(now: date(9), calendar: calendar) == 1)
-        #expect(tank.feed(now: date(10), calendar: calendar) == 1)
+        let d9 = tank.feed(now: date(9), calendar: calendar)
+        let d10 = tank.feed(now: date(10), calendar: calendar)
+        #expect(d9 == 1 && d10 == 1)
         // 3 回で育ちきる
-        #expect(tank.feed(now: date(11), calendar: calendar) == 0)
+        let d11 = tank.feed(now: date(11), calendar: calendar)
+        #expect(d11 == 0)
         #expect(tank.fish[0].fed == TankState.maxFeeds)
     }
 
@@ -237,8 +255,10 @@ struct TankRuleTests {
         #expect(TankState.milestone(total: 12_000, scale: .yen).passed == 3)
         #expect(TankState.milestone(total: 2_000_000, scale: .yen).next == nil)
         var tank = TankState()
-        let a = try #require(tank.place(name: "", amount: 1_200, currency: "JPY", kind: .game, now: date(1)))
-        let b = try #require(tank.place(name: "", amount: 300, currency: "JPY", kind: .food, now: date(1)))
+        let aMade = tank.place(name: "", amount: 1_200, currency: "JPY", kind: .game, now: date(1))
+        let a = try #require(aMade)
+        let bMade = tank.place(name: "", amount: 300, currency: "JPY", kind: .food, now: date(1))
+        let b = try #require(bMade)
         _ = tank.hatch(a.id, now: date(4), pro: false, calendar: calendar)
         tank.buy(b.id, now: date(2))
         let s = tank.summary(month: date(20), currency: "JPY", calendar: calendar)
@@ -256,7 +276,8 @@ struct TankRuleTests {
 
     @Test func savedStateRoundTrips() throws {
         var tank = TankState()
-        let egg = try #require(tank.place(name: "本", amount: 1_500, currency: "JPY", kind: .other, now: date(1)))
+        let eggMade = tank.place(name: "本", amount: 1_500, currency: "JPY", kind: .other, now: date(1))
+        let egg = try #require(eggMade)
         _ = tank.hatch(egg.id, now: date(3, 13), pro: false, calendar: calendar)
         tank.place(name: "", amount: 50, currency: "USD", kind: .gadget, now: date(3))
         let data = try JSONEncoder().encode(tank)
