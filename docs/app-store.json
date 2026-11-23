@@ -1,21 +1,21 @@
 {
   "_doc": "App Store Connect に API で入れる情報（.github/workflows/asc.yml の metadata が読む）。文字数：name・subtitle 30、keywords 100（カンマ区切り）、promotionalText 170、description 4000。カテゴリの ID は EDUCATION・PRODUCTIVITY・UTILITIES・LIFESTYLE・HEALTH_AND_FITNESS など。審査への提出と App プライバシーの申告は本人が行う。",
   "locale": "ja",
-  "name": "",
-  "subtitle": "",
-  "primaryCategory": "",
-  "secondaryCategory": "",
+  "name": "がまん水族館：買わずに育てる魚",
+  "subtitle": "欲しい物を冷ますと、魚が生まれる",
+  "primaryCategory": "LIFESTYLE",
+  "secondaryCategory": "FINANCE",
   "supportUrl": "https://github.com/enludus-daily/app-20261123-gaman-aquarium/issues",
   "privacyPolicyUrl": "https://github.com/enludus-daily/app-20261123-gaman-aquarium/blob/main/PRIVACY.md",
-  "keywords": "",
-  "promotionalText": "",
-  "description": "",
-  "whatToTest": "",
+  "keywords": "節約,衝動買い,買い物,我慢,浪費,貯金,ノースペンド,水槽,アクアリウム,魚,育成,図鑑,癒し,お金",
+  "promotionalText": "「欲しい」と思ったら卵を置く。48 時間待てたら、その金額の魚が生まれて夜の水槽が育つ。銀行やカードとはつながらない、端末の中だけの節約アクアリウム。",
+  "description": "欲しい物が頭から離れないとき、買う前に卵を 1 つ置きましょう。\n\n■ 欲しい物が卵になる\n金額と種類（食べ物・服・ガジェット・ゲーム・コンビニ・その他）を入れるだけ。5 秒で砂の上に卵が置かれます。名前はなくても大丈夫。\n\n■ 待てたら、その金額の魚が生まれる\n卵は 48 時間（¥3,000 以上は 72 時間）温まります。待てたら孵って、金額で魚が決まります。¥300 未満はテトラ、¥3,000 まではエンゼル、¥10,000 まではマンタ、それ以上はジンベエ。種類で色と模様が変わります。\n\n■ 買っても責めない\n待てずに買ったら、正直に「買った」を押すだけ。卵は泡になって消え、図鑑の端に残ります。温めている卵が 3 つ以上あると、水槽が少し暗くなります。\n\n■ 毎日見に来る理由\n孵った翌日に水槽を見に来ると、魚はえさを食べて一回り大きくなります。卵が孵るときは通知でお知らせ（任意）。毎日ちがう「冷ます問い」が、欲しい気持ちを落ち着かせます。\n\n■ 我慢した合計が目盛りに積もる\n水槽の底の目盛りに、待てた金額の合計が積もっていきます。図鑑は 24 種。\n\n■ Pro（買い切り）\n水槽の見た目 3 種（夜の礁・深海・熱帯の川）、季節の魚 12 種、冷ます時間を自分で決める（24 時間〜1 週間）、月のまとめと共有画像。無料でも卵・孵化・図鑑 24 種・水槽は全部使えます。\n\n広告・アカウント・通信はありません。金額や名前はこの iPhone の中だけに保存し、銀行やカードとはつながりません。",
+  "whatToTest": "「欲しい」から金額と種類を入れて卵を置きます。卵をタップすると残り時間と冷ます問い、「待てずに買ってしまった」で泡になります。孵るまで 48 時間かかるため、端末の日時を進めると孵化（卵が光り、タップで孵る）とえさ（翌日）を確かめられます。Pro の購入と復元（設定 > Pro を見る）も確かめてください。",
   "en-US": {
-    "name": "",
-    "subtitle": "",
-    "keywords": "",
-    "promotionalText": "",
-    "description": ""
+    "name": "Wishfish: No-Buy Aquarium",
+    "subtitle": "Cool off a want, hatch a fish",
+    "keywords": "no spend,impulse,shopping,budget,saving,money,frugal,wishlist,aquarium,fish,tank,cozy,habit,spending",
+    "promotionalText": "Want something? Place an egg. Wait 48 hours and it hatches into a glowing fish worth what you didn't spend. No bank links, no accounts. A night aquarium on your phone.",
+    "description": "When a want won't leave your head, place an egg before you buy.\n\n- Every want becomes an egg\nEnter a price and a category (food, clothes, gadgets, games, snacks, other). The egg settles on the sand in five seconds. A name is optional.\n\n- Wait it out, and it hatches\nEggs cool for 48 hours (72 for $30 and up). Make it through and the egg hatches into a fish picked by the price: under $3 a tetra, up to $30 an angelfish, up to $100 a manta, beyond that a whale shark. The category sets its colors and pattern.\n\n- No judgment\nBought it anyway? Tap \"I bought it\". The egg drifts away as bubbles and stays in a corner of your book. With three or more eggs cooling, the tank grows a little darker.\n\n- A reason to come back\nVisit the day after a hatch and your fish eat and grow a size. Optional notifications tell you when an egg is ready, and a new cool-down question each day helps the urge pass.\n\n- Watch the total rise\nEverything you wait out adds up on the gauge in the sand. 24 fish to collect.\n\n- Pro (one-time purchase)\n3 tank styles (night reef, deep sea, jungle river), 12 seasonal fish, your own cool-down time (24 hours to a week), and a monthly summary with a share card. Eggs, hatching, the 24-fish book and your tank are free.\n\nNo ads, no account, no network. Prices and names stay on this iPhone, with no bank or card links."
   }
 }

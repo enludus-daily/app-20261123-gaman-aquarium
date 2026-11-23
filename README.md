@@ -1,36 +1,78 @@
-# daily-app-template
+# がまん水族館：買わずに育てる魚 / Wishfish: No-Buy Aquarium
 
-enludus-daily で毎日作る iOS アプリ（SwiftUI）のテンプレート。テンプレートから作ったリポジトリでは、この README をそのアプリの説明に書き換える。
+**「欲しい」と思ったら卵を置く。買わずに待てたら、その金額の魚が生まれて夜の水槽が育つ。**
+無駄遣い × 水槽（悩み × エンタメ）。enludus-daily の 2026-11-23 のアプリ（[daily-ideas#47](https://github.com/enludus-daily/daily-ideas/issues/47)、監督の指示 #46）。
 
-## 中身
+## だれの・どう使うか
+- つい買ってしまう人が、夜のスマホ・レジ横・セールの通知で「欲しい」が湧いた瞬間に使う。
+- 金額（数字パッド）と種類（6 つ）を入れて「卵を置く」まで 5 秒。名前は任意。
+- 卵は 48 時間（¥3,000 / $30 以上は 72 時間）温まる。待てたら卵が光り、タップで孵る。
+- 待てずに買ったら「待てずに買ってしまった」→ 卵は泡になる（責めない。図鑑の端に残る）。
+- 孵った翌日以降に来ると「えさ」で魚が一回り大きくなる（3 回まで。来なくても罰はない）。
 
-| パス | 役割 |
+## 決まり（数字）とテスト
+| | 決まり | テスト（`Tests/GamanAquariumTests.swift`） |
+|---|---|---|
+| 魚の帯 | ¥300 未満 テトラ／〜¥3,000 エンゼル／〜¥10,000 マンタ／それ以上 ジンベエ（$ は 3 / 30 / 100） | `bandsFollowThePrice` |
+| 図鑑 | 4 帯 × 6 種類 = 24 種（Pro の季節の魚 +12） | `bookHas24FreeAnd12SeasonalWithUniqueIDs` |
+| 1 か月の埋まり方 | 卵 15 個・6 割孵化で 24 種のうち平均 6〜9 種（3〜4 か月でそろう） | `aMonthFillsAboutAThirdOfTheBook` |
+| 怖い・惜しい | 1 日 10〜25% 買いたくなる人の泡になる割合が 2〜4 割 | `aboutAThirdOfEggsPopForATypicalUser` |
+| 暗くなる | 温めている卵 3 つ以上で水槽が暗くなる | `threeWaitingEggsDimTheTank` |
+| えさ | 翌日以降・1 日 1 回・3 回まで、1 回 10% | `fishGrowOnlyWhenVisitedOnALaterDay` |
+| 大きさ | 最大のジンベエでも幅の 4 割以下・水の高さに収まる | `biggestFishFitsInTheTank` |
+| 冷ます時間 | 日をまたいでも時刻の差で数える。時計を戻しても早く孵らない | `eggHatchesExactlyAfterCoolingAcrossMidnight` ほか |
+
+## 世界観と見た目
+夜のアクアリウム。「このアプリでは〔欲しい物〕が〔砂の上の卵〕になり、〔我慢した金額〕が〔光る魚〕になる」。
+- 水・光の筋（コースティクス）・水草・泡・クラゲ・魚・卵はすべて `Canvas` で描く（`App/Sources/Views/TankArt.swift`。画像なし）。動きは `TimelineView(.animation)`、撮影では時刻を止め、裏に回ったら止める。
+- 色：深い藍〜青緑の水（`#123B5E`→`#06142B`）、冷たい光 `#7FE6E2`、卵とあたたかい光 `#FFB48A`。魚は種類ごとに 6 色で光る。書体は細めの丸いサンセリフ、数字は等幅。
+- 11/18 のうおさがし（昼の水面・数字の盤）とは、夜・光る・ゆっくり・丸い書体で分ける。家計簿の表やグラフは主役にしない（合計は砂の目盛りと図鑑だけ）。
+- 大きな画面（size class regular：Duo の内側）では、右に卵の一覧・今日の問い・数字の欄を出す。
+
+## 手応えの表
+| できごと | 動き | 振動 | 音 |
+|---|---|---|---|
+| 押す | ガラスのボタンが 0.94 倍に沈む | selection | タップ 0.25 |
+| 卵を置く | 卵が砂の上で脈打ち、進みの輪が伸びる | soft impact 0.7 | 水に沈むポコッ 0.5 |
+| 孵る | 光の輪が広がる・孵せる卵は揺れてきらめく | success | ガラスの鈴 0.7 |
+| 新しい種類 | 魚の絵つきの帯 | heavy 0.8 | 鈴の 5 音 0.8 |
+| 買った（失敗） | 卵が泡になって上る | soft 0.4（責めない） | 下がる泡の音 0.5 |
+| えさ（毎日） | 粒が降り、魚がふくらむ | light 0.6 | 粒の音 0.4 |
+| 目盛りを越えた | 合計の数字が numericText で変わる | — | 4 音 0.8 |
+動きを減らす設定では、水槽の時刻を止める。
+
+## 毎日開く理由
+1. 卵が孵る（時間で決まる。通知は任意、許可は最初の卵を置いた後に聞く）
+2. えさで魚が育つ（翌日以降に来たときだけ）
+3. 毎日かわる「冷ます問い」40 本（日本語・英語）
+
+## 課金
+| 項目 | 内容 |
 |---|---|
-| `project.yml` | XcodeGen の spec。`.xcodeproj` はコミットしない |
-| `App/Sources/`, `Tests/` | ひな形のアプリとテスト（Swift Testing） |
-| `App/Resources/` | アイコン、アクセントカラー、`PrivacyInfo.xcprivacy` |
-| `.github/workflows/ci.yml` | push / PR で daily-actions の `ios-ci.yml` を呼ぶ（40 桁の SHA で固定） |
-| `.github/workflows/testflight.yml` | 手動（workflow_dispatch）で `ios-testflight.yml` を呼ぶ（アップロードのあと内部テストに配信） |
-| `.github/workflows/asc.yml` | 手動で `ios-asc.yml` を呼ぶ（App Store Connect に名前・説明などを入れる / 最新ビルドを配信） |
-| `docs/app-store.json`, `PRIVACY.md` | App Store Connect に入れる情報、プライバシーポリシー |
-| `scripts/pin-daily-actions.sh` | daily-actions の SHA を書き換える（整備用のセッションか本人だけ。自己 CI の成功を確かめる） |
-| `scripts/new-app.sh` | 名前・表示名・枠（Bundle ID）に書き換える |
-| `scripts/preflight-push.sh`, `.githooks/pre-push` | push の前の検査（秘密・個人情報）と1日の上限 |
-| `scripts/scan-sensitive.sh` | 検査の複製（正本は daily-actions/scan/。違うと CI が警告） |
-| `scripts/make-icon.py` | アイコンを作る（Pillow） |
-| `.claude/skills/` | dev-lifecycle / dev-judgment / dev-workflow（naki0227/useful-map から取得） |
-| `CLAUDE.md`, `docs/daily-runbook.md` | 毎日のセッションの決まりと手順 |
-| `docs/app-store.md` | 審査の危険・本人がすることの記録 |
+| 形と値段 | 買い切り Pro **¥480**（`com.enludus.daily.016.pro`、ファミリー共有可） |
+| 払う理由 3 つ | ①水槽の見た目 3 種（夜の礁・深海・熱帯の川。自分の魚がそのまま泳ぐ）②季節の魚 12 種（孵るとき 3 回に 1 回）③冷ます時間を自分で決める（24h・48h・72h・1 週間）＋月のまとめと共有画像 |
+| 無料の範囲 | 卵・孵化・えさ・図鑑 24 種・水槽・通知。広告なし |
+| 比べたアプリ（2026-11-23、監督の昼の企画の調査） | [NoBuy](https://apps.apple.com/app/id6786423515)：買わなかった日の連続と推定額／[NoSpend](https://apps.apple.com/us/app/id6760283408)：1 日 1 回の記録とバッジ／[Stop Impulse Buying](https://apps.apple.com/us/app/-/id6475173011)：連続＋52 週の貯金／[Focus Fish](https://apps.apple.com/ly/app/focus-fish/id6752958293)：集中でサンゴ礁（題材が違う）／Forest：育成型の買い切りで長く売れている |
+| 値段の位置 | 目安の買い切り ¥300〜¥600 の中。中身（見た目 3・魚 12・時間・まとめ）に対して安い側 |
+| 売上の幅 | 月 300 / 1,000 / 3,000 インストール × 2% × ¥480 × 0.85 ≒ **¥2,400 / ¥8,200 / ¥24,500** |
+| 弱点と対策 | 「節約アプリにお金を払う」矛盾 → Pro の画面の先頭に「あなたが我慢した合計」を出し、1 回の我慢で取り戻せると示す |
+| 出す場面 | 初めて卵が孵った直後に 1 回だけ。ほかは設定・鍵のついた見た目・図鑑から |
+
+## デモで見せる流れ（起動引数 `-demo`、約 17 秒）
+1. 夜の水槽に魚が泳ぎ、孵せる卵が光っている
+2. 卵が孵って光が広がり、新しい魚が図鑑に載る → えさで魚がふくらむ
+3. 「欲しい」で ¥4,800 のゲームを卵にして砂に置く
+
+## 作らなかったもの
+銀行・カードの連携、家計簿の表、サーバー・アカウント・解析、Apple Intelligence、ウィジェット（次の候補）。
+
+## 撮影（`-screenshotScene <名前>`、`_ja` で日本語）
+`onboarding` `onboarding2` `onboarding3` `tank` `ready` `hatch` `dim` `feed` `add` `egg` `book` `empty` `settings` `paywall` `summary` `reef` `deep` `river`
 
 ## 手元（Mac）で開く
-
 ```sh
-brew install xcodegen   # CI は 2.46.0 で固定
+brew install xcodegen
 xcodegen generate
-open DailyApp.xcodeproj
+open GamanAquarium.xcodeproj
 ```
-
-## 版
-
-- Xcode 27.1（ランナー `xcode-27`。GitHub では Preview 扱い）、iOS 18.0 以降、iPhone だけ（iPhone Duo の内側の画面にも合わせる）、Swift 6
-- スキルの取得元：`naki0227/personal-knowledge`（Vault、private）の `templates/repo-bootstrap/.claude/skills/` を、本人の整備用セッションで写す（2026-11-05 に app-quality-bar を追加）
+画面の言葉は `tr("日本語", "English")` で書き、`python3 scripts/gen-strings.py` で `Localizable.xcstrings` を作る。アイコンは `python3 scripts/make-icon-aquarium.py`。

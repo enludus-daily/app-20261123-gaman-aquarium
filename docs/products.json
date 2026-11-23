@@ -4,14 +4,22 @@
     {
       "type": "NON_CONSUMABLE",
       "productId": "com.enludus.daily.016.pro",
-      "referenceName": "Pro",
+      "referenceName": "Wishfish Pro",
       "price": 480,
       "familySharable": true,
-      "reviewNote": "Pro を買うと、すべての〇〇と詳しい振り返りが使えます。課金の画面は設定 > Pro から開けます。",
+      "reviewNote": "Pro unlocks 3 tank styles (night reef, deep sea, jungle river), 12 seasonal fish (1 in 3 hatches), a custom cool-down time (24h to 1 week), and a monthly summary with a share card. Open the paywall from Settings > See Pro, or a locked tank style. 設定 > Pro を見る、または鍵のついた水槽の見た目から開けます。",
       "reviewScreenshot": "docs/iap/paywall.png",
       "localizations": [
-        {"locale": "ja", "name": "Pro", "description": "すべての〇〇と詳しい振り返り"},
-        {"locale": "en-US", "name": "Pro", "description": "All 〇〇 and detailed reviews"}
+        {
+          "locale": "ja",
+          "name": "がまん水族館 Pro",
+          "description": "水槽3種・季節の魚12種・冷ます時間・月のまとめ"
+        },
+        {
+          "locale": "en-US",
+          "name": "Wishfish Pro",
+          "description": "3 tanks, 12 seasonal fish, custom cool-down"
+        }
       ]
     }
   ]
